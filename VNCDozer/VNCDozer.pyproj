@@ -24,6 +24,7 @@
     <Compile Include="VNCDozer.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="iplist.txt" />
     <Content Include="passwords.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
