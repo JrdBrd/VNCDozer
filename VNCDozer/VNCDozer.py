@@ -17,6 +17,7 @@ parser.add_argument("-connect_timeout", help="VNC connection timeout in seconds"
 parser.add_argument("-screen_timeout", help="Screenshot attempt timeout in seconds", type=int, default=120, metavar="T")
 parser.add_argument("--no_screenshots", help="Disable server screenshots", action="store_true")
 parser.add_argument("--no_passwords", help="Disable basic password checks", action="store_true")
+parser.add_argument("--verbose", help="Enable verbose logging", action="store_true")
 args = parser.parse_args()
 
 ##print(args)
@@ -29,6 +30,7 @@ connection_timeout = args.connect_timeout
 screenshot_timeout = args.screen_timeout
 take_screenshots = not args.no_screenshots
 try_passwords = not args.no_passwords
+verbose_logging = args.verbose
 
 # Define file urls
 timestring = time.strftime("%Y-%m-%d_%H:%M:%S")
